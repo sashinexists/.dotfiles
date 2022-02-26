@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias open="xdg-open"
 autoload -U +X bashcompinit && bashcompinit
 source /var/home/sashin/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
