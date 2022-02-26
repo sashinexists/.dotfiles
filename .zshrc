@@ -9,8 +9,7 @@ fi
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=".oh-my-zsh"
-
+export ZSH="${HOME}/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
