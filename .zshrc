@@ -1,3 +1,4 @@
+#!/bin/zsh
 # -----------------------------
 # Environment Variables
 # -----------------------------
@@ -6,6 +7,14 @@ export ZSH="${HOME}/.oh-my-zsh"
 export EDITOR="/usr/local/bin/hx"
 export NVM_DIR="$HOME/.nvm"
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+
+
+
+# -----------------------------
+# Oh My ZSH plugins
+# -----------------------------
+plugins=(taskwarrior colored-man-pages)
 
 # -----------------------------
 # Core Configurations
@@ -16,11 +25,12 @@ source $ZSH/oh-my-zsh.sh
 autoload -U +X bashcompinit && bashcompinit
 
 
+
 # -----------------------------
 # Aliases
 # -----------------------------
 alias open="xdg-open"
-alias tt="~/taskwarrior-tui"
+alias tt="taskwarrior-tui"
 alias today="task due:today"
 alias tasks="task list"
 alias z='zoxide'
@@ -31,6 +41,7 @@ alias tldr='tldr -L en --color always'
 alias zshrc='hx ~/.zshrc'
 alias rc='zshrc'
 alias lynx='toolbox run -c dev lynx'
+alias dev='toolbox enter dev'
 # Toolbox specific
 if [ -z "$TOOLBOX_PATH" ]; then
     alias hx="/usr/local/bin/hx"
@@ -46,6 +57,7 @@ source /var/home/sashin/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # -----------------------------
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
 # -----------------------------
 # Prompt
