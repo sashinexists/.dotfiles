@@ -2,7 +2,7 @@
 # -----------------------------
 # Environment Variables
 # -----------------------------
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="${HOME}/.oh-my-zsh"
 export EDITOR="/usr/local/bin/hx"
 export NVM_DIR="$HOME/.nvm"
@@ -38,10 +38,11 @@ alias l='exa'
 alias idea="eureka"
 alias man='LC_MESSAGES=en_US.UTF-8 man'
 alias tldr='tldr -L en --color always'
-alias zshrc='hx ~/.zshrc'
+alias zshrc='z ~/.dotfiles/ && hx .zshrc'
 alias rc='zshrc'
 alias lynx='toolbox run -c dev lynx'
 alias dev='toolbox enter dev'
+alias new='new-task'
 # Toolbox specific
 if [ -z "$TOOLBOX_PATH" ]; then
     alias hx="/usr/local/bin/hx"
@@ -64,3 +65,8 @@ source /var/home/sashin/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # -----------------------------
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+# -----------------------------
+# New Terminal Output
+# -----------------------------
+task +PENDING due.any: limit:4 order:due- list
